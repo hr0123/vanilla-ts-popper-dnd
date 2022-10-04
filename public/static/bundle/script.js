@@ -1,0 +1,1 @@
+(()=>{"use strict";alert((function(t){return"you just got typed!"}))})();

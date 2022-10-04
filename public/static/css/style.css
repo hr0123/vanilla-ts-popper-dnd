@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* html {
+  height: 100%;
+} */
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.input-wrapper {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-default {
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.input-various {
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.popper-wrapper {
+  width: 300px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 16px;
+}
+
+.popper-box {
+  height: 70px;
+  padding: 8px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popper-box:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.popper-icon {
+  width: 20%;
+  height: 100%;
+  border: 1px solid #ecebec;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 6px;
+}
+
+.popper-description {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 3px;
+}
+
+.popper-title {
+  font-size: 16;
+  font-weight: 500;
+}
+
+.popper-subtitle {
+  font-size: 13px;
+  color: gray;
+}
