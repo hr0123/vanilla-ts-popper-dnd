@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notion Menu & DND - VanillaTS</title>
     <link rel="stylesheet" href="./static/css/style.css" />
@@ -10,58 +10,82 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <script src="../src/index.js" type="module"></script>
-
     <div class="wrapper">
+      <div class="dnd-wrapper">
+        <ul class="drag-sort-enable">
+          <li draggable="true" class="dnd-item-one">ITEM 1</li>
+          <li draggable="true" class="dnd-item-two">ITEM 2</li>
+          <li draggable="true" class="dnd-item-three">ITEM 3</li>
+          <li draggable="true" class="dnd-item-four">ITEM 4</li>
+          <li draggable="true" class="dnd-item-five">ITEM 5</li>
+          <li draggable="true" class="dnd-item-six">ITEM 6</li>
+        </ul>
+      </div>
       <div class="input-wrapper">
         <input class="input-default" type="text" placeholder="Untitled" />
-        <input class="input-various" type="text" placeholder="various" />
-        <!-- <div id="check"></div> -->
+        <div class="input-variable-wrapper">
+          <div class="input-bullet">•</div>
+          <input
+            class="input-variable"
+            type="text"
+            placeholder='Type "/" for commands'
+          />
+        </div>
       </div>
-
-      <div class="popper-wrapper">
-        <div class="popper-box">
-          <div class="popper-icon">icon</div>
-          <div class="popper-description">
-            <div class="popper-title">Text</div>
-            <div class="popper-subtitle">
-              Just start writing with plain text.
+      <div class="popper-wrapper-hidden">
+        <div class="popper-wrapper">
+          <div class="popper-box" name="text" id='Type "/" for commands'>
+            <img class="popper-icon" src="../public/assets/img/icon-text.png" />
+            <div class="popper-description">
+              <div class="popper-title">Text</div>
+              <div class="popper-subtitle">
+                Just start writing with plain text.
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="popper-box">
-          <div class="popper-icon">icon</div>
-          <div class="popper-description">
-            <div class="popper-title">Heading 1</div>
-            <div class="popper-subtitle">Big section heading.</div>
+          <div class="popper-box" name="headingOne" id="Heading 1">
+            <img
+              class="popper-icon"
+              src="../public/assets/img/icon-heading1.png"
+            />
+            <div class="popper-description">
+              <div class="popper-title">Heading 1</div>
+              <div class="popper-subtitle">Big section heading.</div>
+            </div>
           </div>
-        </div>
-
-        <div class="popper-box">
-          <div class="popper-icon">icon</div>
-          <div class="popper-description">
-            <div class="popper-title">Heading 2</div>
-            <div class="popper-subtitle">Medium section heading.</div>
+          <div class="popper-box" name="headingTwo" id="Heading 2">
+            <img
+              class="popper-icon"
+              src="../public/assets/img/icon-heading2.png"
+            />
+            <div class="popper-description">
+              <div class="popper-title">Heading 2</div>
+              <div class="popper-subtitle">Medium section heading.</div>
+            </div>
           </div>
-        </div>
-
-        <div class="popper-box">
-          <div class="popper-icon">icon</div>
-          <div class="popper-description">
-            <div class="popper-title">Heading 3</div>
-            <div class="popper-subtitle">Small section heading.</div>
+          <div class="popper-box" name="headingThree" id="Heading 3">
+            <img
+              class="popper-icon"
+              src="../public/assets/img/icon-heading3.png"
+            />
+            <div class="popper-description">
+              <div class="popper-title">Heading 3</div>
+              <div class="popper-subtitle">Small section heading.</div>
+            </div>
           </div>
-        </div>
-
-        <div class="popper-box">
-          <div class="popper-icon">icon</div>
-          <div class="popper-description">
-            <div class="popper-title">Bulleted List</div>
-            <div class="popper-subtitle">Create a simple bulleted list.</div>
+          <div class="popper-box" name="bulletedList" id="List">
+            <img
+              class="popper-icon"
+              src="../public/assets/img/icon-bulletedlist.png"
+            />
+            <div class="popper-description">
+              <div class="popper-title">Bulleted List</div>
+              <div class="popper-subtitle">Create a simple bulleted list.</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="../src/components/menuAndDnd.js" type="module"></script>
   </body>
 </html>
