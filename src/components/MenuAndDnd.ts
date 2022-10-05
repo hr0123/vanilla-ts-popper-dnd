@@ -47,12 +47,22 @@ function handleDrop(item) {
 // ---
 
 // 1. Input 입력값에 슬래시 포함되면 => popper 나타나게(슬래시 미포함 시 => popper 사라지게)
+// export interface Type {
+//   input: {
+//     placeholder: string;
+//     style: string;
+//   };
+//   popperDisplay: {
+//     style: string;
+//   };
+// }
+
 const input = document.querySelector('input[class="input-variable"]');
 const popperDisplay = document.querySelector(".popper-wrapper-hidden");
 
-input?.addEventListener("input", handlePopper);
+input?.addEventListener("input", onChangeInput);
 
-function handlePopper(e) {
+function onChangeInput(e): void {
   e.target.value.includes("/")
     ? (popperDisplay.style.display = "block")
     : (popperDisplay.style.display = "none");
@@ -73,11 +83,11 @@ const selectBulletedList = document.querySelector(
   '.popper-box[name="bulletedList"]',
 );
 
-selectText.addEventListener("click", onClickMenu);
-selectHeadingOne.addEventListener("click", onClickMenu);
-selectHeadingTwo.addEventListener("click", onClickMenu);
-selectHeadingThree.addEventListener("click", onClickMenu);
-selectBulletedList.addEventListener("click", onClickMenu);
+selectText?.addEventListener("click", onClickMenu);
+selectHeadingOne?.addEventListener("click", onClickMenu);
+selectHeadingTwo?.addEventListener("click", onClickMenu);
+selectHeadingThree?.addEventListener("click", onClickMenu);
+selectBulletedList?.addEventListener("click", onClickMenu);
 
 const bullet = document.querySelector(".input-bullet");
 
